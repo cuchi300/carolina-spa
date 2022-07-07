@@ -1,0 +1,2 @@
+function iniciarApp(){sliderHeader(),headerLogo()}function sliderHeader(){window.swiper=new Swiper({el:".slider__contenedor",slideClass:"slider__slide",createElements:!0,autoplay:{delay:5e3},loop:!0,pagination:!0,navigation:!0})}function headerLogo(){const e=document.querySelector(".header__logo");setTimeout((()=>{e.classList.add("header__logo--mostrar")}),1e3)}document.addEventListener("DOMContentLoaded",(()=>{iniciarApp()}));
+//# sourceMappingURL=app.js.map

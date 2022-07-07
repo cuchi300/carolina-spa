@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sociales{
+    margin: 5rem 0;
+    display: flex;
+    gap: 1rem;
+    @include m.tablet {
+        margin:0;
+    }
+
+    &__enlace{
+        transition: opacity .2s, transform .2s;
+        &::before{
+            content: '';
+            padding: 2rem;
+            display: inline-block;
+        }
+
+        &:hover{
+            opacity: .7;
+            transform: scale(1.1);
+        }
+
+        &[href*="facebook.com"]::before{
+            background-image: url(../img/icono_facebook.svg);
+        }
+
+        &[href*="twitter.com"]::before{
+            background-image: url(../img/icono_twitter.svg);
+        }
+
+        &[href*="instagram.com"]::before{
+            background-image: url(../img/icono_instagram.svg);
+        }
+        &[href*="pinterest.com"]::before{
+            background-image: url(../img/icono_pinterest.svg);
+        }
+
+        &[href*="youtube.com"]::before{
+            background-image: url(../img/icono_youtube.svg);
+        }
+        &[href*="tiktok.com"]::before{
+            background-image: url(../img/icono_tiktok.svg);
+        }
+    }
+
+    &__accesible{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        display: block;
+    }
+}
